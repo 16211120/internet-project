@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" media="all" href="styles/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="styles/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="styles/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="themes/brown/style.css" />
+<script language="javascript" type="text/javascript">
+function cvalidation()
+{
+ if(document.log1.firstName.value.length==0)
+ {
+  alert("Please enter your First Name ");
+  location.reload();
+ }
+ if(document.log1.lastName.value.length==0)
+ {
+  alert("Please enter your Last Name ");
+  location.reload();
+ }
+ if(document.log1.email.value.length==0)
+ {
+  alert("Please enter your email ");
+  location.reload();
+ }
+ if(document.log1.password.value.length==0)
+ {
+  alert("Please enter your password ");
+  location.reload();
+ }
+ if(document.log1.repassword.value.length==0)
+ {
+  alert("Please retype your password  ");
+  location.reload();
+ }
+ else
+ {
+  location="checkout.html";
+ }
+ 
+}
+function lvalidation()
+{
+ if(document.log2.email2.value.length==0)
+ {
+  alert("Please enter your email ");
+  location.reload();
+ }
+ if(document.log2.password2.value.length==0)
+ {
+  alert("Please enter your password ");
+  location.reload();
+ }
+ else
+ {
+  location="checkout.html";
+ }
+}
+</script>
+</head>
+<body>
+<div id="warp">
+  <div id="main" class="container_16">
+    <div id="header" class="grid_16">
+      <div id="logo" class="grid_4 alpha">
+        <h1><a href="index.html">Cover Mart</a></h1>
+        <h2>Best fitted covers</h2>
+      </div>
+      <div id="headright" class="grid_7 prefix_5 omega">
+        <h3 class="login"><span class="hiUser"></span> <span class="myAccount"><a href="#">My Account</a></span> <a href="#">Logout</a></h3>
+        
+        <p><span class="vChart"><a href="#">View Cart</a></span> <span class="cOut"><a href="checkout.html">Checkout</a></span></p>
+      </div>
+    </div>
+    <div id="mainMenu" class="grid_16">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="product-overview.html">Covers</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+    <div id="stickySearch" class="grid_16">
+      <div class="stickyNews grid_12 alpha">
+        <p>Newley Arival Cases. <em>Best fitted for your iphone.</em></p>
+      </div>
+      
+    </div>
+    <div class="checkout grid_16">
+      <div class="newAccount grid_8 alpha">
+        <h4>Create New Account</h4>
+        <form name="log1" method="post" action="logindetails.php" onsubmit="cvalidation()">
+          <fieldset>
+            <label for="firstName">First Name: </label>
+            <input type="text" tabindex="1" size="30" value="" id="firstName" name="firstName" class="text" />
+            <br />
+            <label for="lastName">Last Name: </label>
+            <input type="text" tabindex="2" size="30" value="" id="lastName" name="lastName" class="text" />
+            <br />
+            <label for="email">Email:</label>
+            <input type="text" tabindex="3" size="30" value="" id="email" name="email" class="text" />
+            <br />
+            <label for="password">Password:</label>
+            <input type="password" tabindex="4" size="30" value="" id="password" name="password" class="text" />
+            <br />
+            <label for="repassword">Retype Password:</label>
+            <input type="password" tabindex="5" size="30" value="" id="repassword" name="repassword" class="text" />
+            <br />
+            <div class="clear"></div>
+          </fieldset>
+          <p>
+            <input type="submit" value="Create New Account" tabindex="6" name="update" class="newAccountButton" onclick="cvalidation();" />
+          </p>
+          <input type="hidden" value="30" />
+        </form>
+      </div>
+      <div class="loginPage grid_8 omega">
+        <h4>Login</h4>
+        <form name="log2" method="post" action="logindetails2.php" onsubmit="lvalidation()">
+          <fieldset>
+            <label for="email2">Email:</label>
+            <input type="text" tabindex="1" size="30" value="" id="email2" name="email" class="text" />
+            <br />
+            <label for="password2">Password:</label>
+            <input type="password" tabindex="2" size="30" value="" id="password2" name="password" class="text" />
+            <br />
+            <div class="clear"></div>
+          </fieldset>
+          <p>
+            <input type="submit" value="Login" tabindex="3" name="update" class="userLogin" onclick="lvalidation();" />
+          </p>
+          <input type="hidden" value="30" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div id="richContent2">
+  <div class="container_16">
+    <div class="lastTweet grid_4">
+      </div>
+    <div class="corporateInfo grid_4">
+      <h4>Corporate Info</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Term &amp; Conditions</a></li>
+        
+        <li><a href="#">About us</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="storeDelivery grid_4">
+      <h4>Store &amp; Delivery</h4>
+      <ul>
+        <li><a href="#">Store Locator</a></li>
+        <li><a href="#">Delivery Terms & Pricing</a></li>
+        
+      </ul>
+    </div>
+    <div class="socialNet grid_4">
+      <h4>Keep in touch</h4>
+      <ul>
+        <li><a href="#" class="facebook">Facebook</a></li>
+        <li><a href="#" class="twitter">Twitter</a></li>
+        <li><a href="#" class="feed">Feed</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container_16">
+    <div class="copyright grid_16">
+      <p class="left">Copyright &copy; 2017,<i>Cover Mart </i>, All Rights Reserved</p>
+     
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Checkout 5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" media="all" href="styles/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="styles/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="styles/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="themes/brown/style.css" />
+
+<script language="javascript" type="text/javascript">
+function validation()
+{
+ if((!document.check5.method[0].checked)&&(!document.check5.method[1].checked))
+ {
+  alert("Please Select a Credit card Or Paypal");
+  
+ }
+ if(document.check5.type.selectedIndex==0)
+ {
+  alert("Please select a Credit card type ");
+  
+ }
+ if(document.check5.cc.value.length==0)
+ {
+  alert("Please enter your Credit card number ");
+  
+ }
+ if(isNaN(document.check5.cc.value))
+ {
+  alert("Please enter valid Credit card number");
+  
+ }
+ if(document.check5.month.selectedIndex==0)
+ {
+  alert("Please select a month ");
+  
+ }
+ if(document.check5.year.selectedIndex==0)
+ {
+  alert("Please select a year ");
+  
+ }
+ if(document.check5.no.value.length==0)
+ {
+  alert("Please enter your Credit card Verification Number ");
+  
+ }
+ else
+ {
+   location="placeorder.html"; 
+ }
+ 
+}
+</script>
+</head>
+<body>
+<div id="warp">
+  <div id="main" class="container_16">
+    <div id="header" class="grid_16">
+      <div id="logo" class="grid_4 alpha">
+        <h1><a href="index.html">Cover Mart</a></h1>
+        <h2>Best fitted covers</h2>
+      </div>
+      <div id="headright" class="grid_7 prefix_5 omega">
+        <h3 class="login"><span class="hiUser"></span> <span class="myAccount"><a href="#">My Account</a></span> <a href="#">Logout</a></h3>
+       
+      </div>
+    </div>
+    <div id="mainMenu" class="grid_16">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="product-overview.html">Covers</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+    <div id="stickySearch" class="grid_16">
+      <div class="stickyNews grid_12 alpha">
+       <p>Newley Arival Cases. <em>Best fitted for your iphone.</em></p>
+      </div>
+      <div class="search grid_4 omega">
+        
+      </div>
+    </div>
+    <div class="pageInfo grid_16">
+      <div class="dapurBlog grid_11 alpha">
+        <h3>Checkout</h3>
+      </div>
+    </div>
+    <div class="checkout grid_16">
+      <div class="billInfo grid_11 alpha">
+        <h4>4. Payment Option</h4>
+        <form name="check5" method="post" action="payment.php" id="comment_form">
+          <fieldset>
+            
+            <dl>
+              <dt>
+                <input type="radio" name="method" value="Credit Card" />
+                Credit Card</dt>
+              <dd> Credit Card Type * <br />
+                <select name="type" >
+                  <option>Please Select</option>
+                  <option>Mastercard</option>
+                  <option>Visa</option>
+                  
+                </select>
+              </dd>
+              <dd> Credit Card Number * <br />
+                <input type="text" size="35" value="" name="cc" class="text" />
+              </dd>
+              <dd> Expiration Date * <br />
+                <select name="month">
+                  <option>Month</option>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                  <option>May</option>
+                  <option>June</option>
+                  <option>July</option>
+                  <option>August</option>
+                  <option>September</option>
+                  <option>October</option>
+                  <option>November</option>
+                  <option>Desember</option>
+                </select>
+               
+                <select name="year">
+                  <option>Year</option>
+                  <option>2017</option>
+                  <option>2018</option>
+                  <option>2019</option>
+                  <option>2020</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                  <option>2027</option>
+                  <option>2028</option>
+                  <option>2029</option>
+                  <option>2030</option>
+                </select>
+              </dd>
+              <dd> Card Verification Number * <br />
+                <input type="text" size="5" value="" name="no" class="text" />
+                <span><a href="#">What is this?</a></span> </dd>
+            </dl>
+            <dl>
+              <dt>
+                <input type="radio" name="method" value="Paypal" />
+                Paypal</dt>
+              <dd><em>You will be redirected to PayPal website when you place an order.</em></dd>
+            </dl>
+          </fieldset>
+          <p>
+            <input type="submit" value="Place Order &amp; Checkout" id="checkout" name="checkout" class="button" onclick="validation();"/>
+          </p>
+          <input type="hidden" value="30" name="comment_post_ID" />
+        </form>
+      </div>
+      <div class="summary grid_5 omega">
+        <h4>Summary</h4>
+        <div class="sumWarp">
+          <ul>
+            <li><a href="#" class="down">Shopping Cart <span><img src="images/done.png" alt="" /></span></a>
+              
+            </li>
+            <li><a href="#">Billing Information <span><img src="images/done.png" alt="" /></span></a></li>
+            <li><a href="#" class="down">Shipping Information <span><img src="images/done.png" alt="" /></span></a>
+            </li>
+            <li><a href="#" class="down">Delivery Option <span><img src="images/done.png" alt="" /></span></a>
+            </li>
+            <li><a href="#" class="billActive">Payment Option</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div id="richContent2">
+  <div class="container_16">
+    <div class="lastTweet grid_4">
+     </div>
+    <div class="corporateInfo grid_4">
+      <h4>Corporate Info</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Term &amp; Conditions</a></li>
+        
+        <li><a href="#">About us</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="storeDelivery grid_4">
+      <h4>Store &amp; Delivery</h4>
+      <ul>
+        <li><a href="#">Store Locator</a></li>
+        <li><a href="#">Delivery Terms & Pricing</a></li>
+       
+      </ul>
+    </div>
+    <div class="socialNet grid_4">
+      <h4>Keep in touch</h4>
+      <ul>
+        <li><a href="#" class="facebook">Facebook</a></li>
+        <li><a href="#" class="twitter">Twitter</a></li>
+        <li><a href="#" class="feed">Feed</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container_16">
+    <div class="copyright grid_16">
+      <p class="left">Copyright &copy; 2017,<i>Cover Mart </i>, All Rights Reserved</p><div class="clear"></div>
+    <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</body>
+</html>
